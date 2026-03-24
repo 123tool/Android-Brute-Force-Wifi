@@ -9,9 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SPY-E WiFi Utility v2.2"
-        android:textColor="#BB86FC"
-        android:textSize="22sp"
+        android:text="SPY Wifi Brute Force Pro"  android:textColor="#00FF00"             android:textSize="22sp"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"/>
