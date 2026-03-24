@@ -52,6 +52,24 @@ listView.setOnItemClickListener((parent, view, position, id) -> {
     String ssid = selectedWifi.split(" \\(")[0]; 
     
     showPasswordDialog(ssid);
+    private void showPasswordDialog(String ssid) {
+    android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+    builder.setTitle("Connect to " + ssid);
+
+    final android.widget.EditText input = new android.widget.EditText(this);
+    input.setHint("Masukkan Password");
+    input.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD);
+    builder.setView(input);
+
+    builder.setPositiveButton("Connect", (dialog, which) -> {
+        String password = input.getText().toString();
+        com.rainbow.wifi.utils.WifiConnector.connectToWifi(this, ssid, password);
+    });
+
+    builder.setNegativeButton("Batal", (dialog, which) -> dialog.cancel());
+    builder.show();
+}
+
 });
 
         btnScan.setOnClickListener(v -> checkPermissionsAndScan());
