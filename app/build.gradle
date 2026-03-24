@@ -1,0 +1,28 @@
+android {
+    namespace 'com.rainbow.wifi'
+    compileSdk 34 // Android 14
+
+    defaultConfig {
+        applicationId "com.rainbow.wifi"
+        minSdk 24    // Minimal Android 7 (Nougat) agar fitur modern tersedia
+        targetSdk 34  // Target Android terbaru
+        versionCode 1
+        versionName "2.0-Modern"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+}
