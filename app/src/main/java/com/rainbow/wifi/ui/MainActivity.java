@@ -46,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, wifiNames);
         listView.setAdapter(adapter);
+listView.setOnItemClickListener((parent, view, position, id) -> {
+    String selectedWifi = wifiNames.get(position);
+    // Ambil SSID saja dari string (menghapus BSSID dan dBm)
+    String ssid = selectedWifi.split(" \\(")[0]; 
+    
+    showPasswordDialog(ssid);
+});
 
         btnScan.setOnClickListener(v -> checkPermissionsAndScan());
     }
