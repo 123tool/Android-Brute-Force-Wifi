@@ -9,12 +9,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rainbow WiFi Utility v2.1"
+        android:text="SPY-E WiFi Utility v2.2"
         android:textColor="#BB86FC"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="16dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,8 +28,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginEnd="5dp"
-            android:text="Scan WiFi"
+            android:layout_marginEnd="4dp"
+            android:text="Scan"
             android:backgroundTint="#BB86FC"
             android:textColor="#000000"/>
 
@@ -38,8 +38,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="5dp"
-            android:text="Connect WPS"
+            android:layout_marginStart="4dp"
+            android:text="WPS Mode"
             android:backgroundTint="#03DAC5"
             android:textColor="#000000"/>
     </LinearLayout>
@@ -47,8 +47,34 @@
     <ListView
         android:id="@+id/wifiList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:divider="#333333"
-        android:dividerHeight="1dp" />
+        android:dividerHeight="1dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Console Output:"
+        android:textColor="#03DAC5"
+        android:textSize="12sp"
+        android:layout_marginBottom="4dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#000000"
+        android:padding="8dp">
+        
+        <TextView
+            android:id="@+id/txtLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="> System Ready...\n> Waiting for user action..."
+            android:textColor="#00FF00"
+            android:fontFamily="monospace"
+            android:textSize="11sp"/>
+    </ScrollView>
 
 </LinearLayout>
