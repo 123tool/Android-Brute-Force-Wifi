@@ -9,26 +9,45 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rainbow WiFi Utility v2.0"
+        android:text="Rainbow WiFi Utility v2.1"
         android:textColor="#BB86FC"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"/>
 
-    <Button
-        android:id="@+id/btnScan"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mulai Scan WiFi"
-        android:backgroundTint="#BB86FC"
-        android:textColor="#000000"/>
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="Scan WiFi"
+            android:backgroundTint="#BB86FC"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/btnWps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:text="Connect WPS"
+            android:backgroundTint="#03DAC5"
+            android:textColor="#000000"/>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/wifiList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
         android:divider="#333333"
         android:dividerHeight="1dp" />
 
